@@ -1,0 +1,197 @@
+Index: .idea/sonarlint/issuestore/index.pb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n\\\n,2.2.1. spring_hibernate/spring-hibernate.iml\u0012,9\\2\\92f30a260e77e30e0d45fd17228db1327249e5b2\nO\n\u001F2.2.1. spring_hibernate/pom.xml\u0012,3\\b\\3be6f0e10f8a6e2c0d2911f62068c28004434d61\nq\nA2.2.1. spring_hibernate/src/main/java/hiber/config/AppConfig.java\u0012,8\\4\\849c891861758327454fde919f53cb87a94aae82\nl\n<2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDao.java\u0012,8\\6\\86293f30ec2cba658cc0ea132d3c3f834b19757d\no\n?2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDaoImp.java\u0012,b\\9\\b95ca055dbbbe49fb7ae3f464ed4e56b8baee304\n:\n\n.gitignore\u0012,a\\5\\a5cc2925ca8258af241be7e5b0381edf30266302\nw\nG2.2.1. spring_hibernate/src/main/java/hiber/service/UserServiceImp.java\u0012,c\\0\\c0611d2bd5dca4650ccae5b185b1533107d1b449\nt\nD2.2.1. spring_hibernate/src/main/java/hiber/service/UserService.java\u0012,2\\8\\28ca2f080bd442bd90d472c2c47d0445a3f81215\nR\n\"2.2.1. spring_hibernate/.gitignore\u0012,1\\a\\1a1165c93d3b5c465d08dfba1bd6b0e955e6bc3b\nj\n:2.2.1. spring_hibernate/src/main/java/hiber/model/Car.java\u0012,a\\5\\a5ec6ff1f9d6fa4282123d903378f2e541f7b51a\nk\n;2.2.1. spring_hibernate/src/main/java/hiber/model/User.java\u0012,a\\9\\a90cdad772c57e30d952552c901c60593a55fab4\nh\n82.2.1. spring_hibernate/src/main/java/hiber/MainApp.java\u0012,a\\3\\a3fc7e208f829c92b337a74bbe0bf7330c4bbd77
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sonarlint/issuestore/index.pb b/.idea/sonarlint/issuestore/index.pb
+--- a/.idea/sonarlint/issuestore/index.pb	(revision aed2fa2e24f6298717d40bdb9682ac36f4cb9a54)
++++ b/.idea/sonarlint/issuestore/index.pb	(date 1695823687461)
+@@ -1,26 +1,20 @@
+ 
+-\
+-,2.2.1. spring_hibernate/spring-hibernate.iml,9\2\92f30a260e77e30e0d45fd17228db1327249e5b2
+-O
+-2.2.1. spring_hibernate/pom.xml,3\b\3be6f0e10f8a6e2c0d2911f62068c28004434d61
+-q
+-A2.2.1. spring_hibernate/src/main/java/hiber/config/AppConfig.java,8\4\849c891861758327454fde919f53cb87a94aae82
+-l
+-<2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDao.java,8\6\86293f30ec2cba658cc0ea132d3c3f834b19757d
+-o
+-?2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDaoImp.java,b\9\b95ca055dbbbe49fb7ae3f464ed4e56b8baee304
+ :
+ 
+ .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+-w
+-G2.2.1. spring_hibernate/src/main/java/hiber/service/UserServiceImp.java,c\0\c0611d2bd5dca4650ccae5b185b1533107d1b449
+-t
+-D2.2.1. spring_hibernate/src/main/java/hiber/service/UserService.java,2\8\28ca2f080bd442bd90d472c2c47d0445a3f81215
++S
++#src/main/java/hiber/model/User.java,4\4\4400be6d461ac349a8813fca5d6d225e21ead942
++Y
++)src/main/java/hiber/config/AppConfig.java,b\3\b377774a5704a94bd530d74708790489bdda04cf
++T
++$src/main/java/hiber/dao/UserDao.java,6\b\6bcb15c5378e8f22ec1f55ac619149e0241c99ef
++7
++pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+ R
+-"2.2.1. spring_hibernate/.gitignore,1\a\1a1165c93d3b5c465d08dfba1bd6b0e955e6bc3b
+-j
+-:2.2.1. spring_hibernate/src/main/java/hiber/model/Car.java,a\5\a5ec6ff1f9d6fa4282123d903378f2e541f7b51a
+-k
+-;2.2.1. spring_hibernate/src/main/java/hiber/model/User.java,a\9\a90cdad772c57e30d952552c901c60593a55fab4
+-h
+-82.2.1. spring_hibernate/src/main/java/hiber/MainApp.java,a\3\a3fc7e208f829c92b337a74bbe0bf7330c4bbd77
+\ No newline at end of file
++"src/main/java/hiber/model/Car.java,8\6\860082df94319f3a96518a0bd8d41fb43a0761a8
++_
++/src/main/java/hiber/service/UserServiceImp.java,0\d\0d1d7c670b1e56f8cee361c90d5be7aee927159f
++W
++'src/main/java/hiber/dao/UserDaoImp.java,7\d\7d1fe8ae21bc7fbb882196f1c69e494adbcf4eac
++P
++ src/main/java/hiber/MainApp.java,2\c\2c1e35afd9fec02986d82775813f89ba1bc8f415
+\ No newline at end of file
+Index: .idea/sonarlint/securityhotspotstore/index.pb
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\n\\\n,2.2.1. spring_hibernate/spring-hibernate.iml\u0012,9\\2\\92f30a260e77e30e0d45fd17228db1327249e5b2\nO\n\u001F2.2.1. spring_hibernate/pom.xml\u0012,3\\b\\3be6f0e10f8a6e2c0d2911f62068c28004434d61\nq\nA2.2.1. spring_hibernate/src/main/java/hiber/config/AppConfig.java\u0012,8\\4\\849c891861758327454fde919f53cb87a94aae82\nl\n<2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDao.java\u0012,8\\6\\86293f30ec2cba658cc0ea132d3c3f834b19757d\no\n?2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDaoImp.java\u0012,b\\9\\b95ca055dbbbe49fb7ae3f464ed4e56b8baee304\n:\n\n.gitignore\u0012,a\\5\\a5cc2925ca8258af241be7e5b0381edf30266302\nR\n\"2.2.1. spring_hibernate/.gitignore\u0012,1\\a\\1a1165c93d3b5c465d08dfba1bd6b0e955e6bc3b\nw\nG2.2.1. spring_hibernate/src/main/java/hiber/service/UserServiceImp.java\u0012,c\\0\\c0611d2bd5dca4650ccae5b185b1533107d1b449\nt\nD2.2.1. spring_hibernate/src/main/java/hiber/service/UserService.java\u0012,2\\8\\28ca2f080bd442bd90d472c2c47d0445a3f81215\nj\n:2.2.1. spring_hibernate/src/main/java/hiber/model/Car.java\u0012,a\\5\\a5ec6ff1f9d6fa4282123d903378f2e541f7b51a\nk\n;2.2.1. spring_hibernate/src/main/java/hiber/model/User.java\u0012,a\\9\\a90cdad772c57e30d952552c901c60593a55fab4\nh\n82.2.1. spring_hibernate/src/main/java/hiber/MainApp.java\u0012,a\\3\\a3fc7e208f829c92b337a74bbe0bf7330c4bbd77
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/sonarlint/securityhotspotstore/index.pb b/.idea/sonarlint/securityhotspotstore/index.pb
+--- a/.idea/sonarlint/securityhotspotstore/index.pb	(revision aed2fa2e24f6298717d40bdb9682ac36f4cb9a54)
++++ b/.idea/sonarlint/securityhotspotstore/index.pb	(date 1695823687486)
+@@ -1,26 +1,20 @@
+ 
+-\
+-,2.2.1. spring_hibernate/spring-hibernate.iml,9\2\92f30a260e77e30e0d45fd17228db1327249e5b2
+-O
+-2.2.1. spring_hibernate/pom.xml,3\b\3be6f0e10f8a6e2c0d2911f62068c28004434d61
+-q
+-A2.2.1. spring_hibernate/src/main/java/hiber/config/AppConfig.java,8\4\849c891861758327454fde919f53cb87a94aae82
+-l
+-<2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDao.java,8\6\86293f30ec2cba658cc0ea132d3c3f834b19757d
+-o
+-?2.2.1. spring_hibernate/src/main/java/hiber/dao/UserDaoImp.java,b\9\b95ca055dbbbe49fb7ae3f464ed4e56b8baee304
+ :
+ 
+ .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
++S
++#src/main/java/hiber/model/User.java,4\4\4400be6d461ac349a8813fca5d6d225e21ead942
++Y
++)src/main/java/hiber/config/AppConfig.java,b\3\b377774a5704a94bd530d74708790489bdda04cf
++7
++pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
++T
++$src/main/java/hiber/dao/UserDao.java,6\b\6bcb15c5378e8f22ec1f55ac619149e0241c99ef
+ R
+-"2.2.1. spring_hibernate/.gitignore,1\a\1a1165c93d3b5c465d08dfba1bd6b0e955e6bc3b
+-w
+-G2.2.1. spring_hibernate/src/main/java/hiber/service/UserServiceImp.java,c\0\c0611d2bd5dca4650ccae5b185b1533107d1b449
+-t
+-D2.2.1. spring_hibernate/src/main/java/hiber/service/UserService.java,2\8\28ca2f080bd442bd90d472c2c47d0445a3f81215
+-j
+-:2.2.1. spring_hibernate/src/main/java/hiber/model/Car.java,a\5\a5ec6ff1f9d6fa4282123d903378f2e541f7b51a
+-k
+-;2.2.1. spring_hibernate/src/main/java/hiber/model/User.java,a\9\a90cdad772c57e30d952552c901c60593a55fab4
+-h
+-82.2.1. spring_hibernate/src/main/java/hiber/MainApp.java,a\3\a3fc7e208f829c92b337a74bbe0bf7330c4bbd77
+\ No newline at end of file
++"src/main/java/hiber/model/Car.java,8\6\860082df94319f3a96518a0bd8d41fb43a0761a8
++P
++ src/main/java/hiber/MainApp.java,2\c\2c1e35afd9fec02986d82775813f89ba1bc8f415
++_
++/src/main/java/hiber/service/UserServiceImp.java,0\d\0d1d7c670b1e56f8cee361c90d5be7aee927159f
++W
++'src/main/java/hiber/dao/UserDaoImp.java,7\d\7d1fe8ae21bc7fbb882196f1c69e494adbcf4eac
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9326543a-fbdf-4152-b14c-03fff8b490fc\" name=\"Changes\" comment=\"add .gitignore\">\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/hiber/MainApp.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/hiber/MainApp.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/hiber/dao/UserDao.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/hiber/dao/UserDao.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/hiber/model/Car.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/hiber/model/Car.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/hiber/service/UserService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/hiber/service/UserService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/hiber/service/UserServiceImp.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/hiber/service/UserServiceImp.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <excluded-from-favorite>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"LOCAL\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"master\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </excluded-from-favorite>\r\n    <favorite-branches>\r\n      <branch-storage>\r\n        <map>\r\n          <entry type=\"LOCAL\">\r\n            <value>\r\n              <list>\r\n                <branch-info repo=\"$PROJECT_DIR$\" source=\"car\" />\r\n              </list>\r\n            </value>\r\n          </entry>\r\n        </map>\r\n      </branch-storage>\r\n    </favorite-branches>\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MavenImportPreferences\">\r\n    <option name=\"generalSettings\">\r\n      <MavenGeneralSettings>\r\n        <option name=\"useMavenConfig\" value=\"true\" />\r\n      </MavenGeneralSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2UlNWO1BprSa2KYsMfNW9MTX36M\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SONARLINT_PRECOMMIT_ANALYSIS\": \"true\",\r\n    \"WebServerToolWindowFactoryState\": \"false\",\r\n    \"ignore.virus.scanning.warn.message\": \"true\",\r\n    \"last_opened_file_path\": \"C:/Users/Admin/IdeaProjects/PP_2_2_1_spring_hibernate\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"project.structure.last.edited\": \"Project\",\r\n    \"project.structure.proportion\": \"0.15\",\r\n    \"project.structure.side.proportion\": \"0.0\",\r\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\",\r\n    \"spring.configuration.checksum\": \"973519049f1dda9dcc3abb7a7e786282\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  },\r\n  \"keyToStringList\": {\r\n    \"DatabaseDriversLRU\": [\r\n      \"mysql\"\r\n    ]\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\Admin\\IdeaProjects\\PP_2_2_1_spring_hibernate\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"MainApp\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"hiber.MainApp\" />\r\n      <module name=\"spring-hibernate\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"hiber.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.MainApp\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9326543a-fbdf-4152-b14c-03fff8b490fc\" name=\"Changes\" comment=\"\" />\r\n      <created>1693510237749</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1693510237749</updated>\r\n      <workItem from=\"1693510238745\" duration=\"26578000\" />\r\n      <workItem from=\"1694364029053\" duration=\"3365000\" />\r\n      <workItem from=\"1694446398544\" duration=\"4455000\" />\r\n      <workItem from=\"1695215166829\" duration=\"13579000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add .gitignore\">\r\n      <created>1694113922928</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1694113922928</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"add .gitignore\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add .gitignore\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision aed2fa2e24f6298717d40bdb9682ac36f4cb9a54)
++++ b/.idea/workspace.xml	(date 1695823666201)
+@@ -4,14 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9326543a-fbdf-4152-b14c-03fff8b490fc" name="Changes" comment="add .gitignore">
+-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/MainApp.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDao.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/dao/UserDaoImp.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/model/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/model/Car.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/service/UserService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/hiber/service/UserServiceImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hiber/service/UserServiceImp.java" afterDir="false" />
+-    </list>
++    <list default="true" id="9326543a-fbdf-4152-b14c-03fff8b490fc" name="Changes" comment="add .gitignore" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -24,6 +17,9 @@
+       </list>
+     </option>
+   </component>
++  <component name="Git.Rebase.Settings">
++    <option name="NEW_BASE" value="pp2023_221/car" />
++  </component>
+   <component name="Git.Settings">
+     <excluded-from-favorite>
+       <branch-storage>
+@@ -48,6 +44,13 @@
+               </list>
+             </value>
+           </entry>
++          <entry type="REMOTE">
++            <value>
++              <list>
++                <branch-info repo="$PROJECT_DIR$" source="pp2023_221/car" />
++              </list>
++            </value>
++          </entry>
+         </map>
+       </branch-storage>
+     </favorite-branches>
+@@ -133,7 +136,7 @@
+       <workItem from="1693510238745" duration="26578000" />
+       <workItem from="1694364029053" duration="3365000" />
+       <workItem from="1694446398544" duration="4455000" />
+-      <workItem from="1695215166829" duration="13579000" />
++      <workItem from="1695215166829" duration="18189000" />
+     </task>
+     <task id="LOCAL-00001" summary="add .gitignore">
+       <created>1694113922928</created>
+@@ -147,6 +150,29 @@
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="car" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="add .gitignore" />
