@@ -6,11 +6,13 @@ import hiber.model.User;
 import hiber.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public class MainApp {
-   public static void main(String[] args) throws SQLException {
+   //можно перенести этот эксепшн в UerDaoImp в метод файндюзер,
+   //потому что все исключения, в целом состоятся в том, что мы будем,
+   //например, искать юзера в пустой таблице или по пустому полю
+   public static void main(String[] args) {
       AnnotationConfigApplicationContext context =
               new AnnotationConfigApplicationContext(AppConfig.class);
 
