@@ -1,0 +1,156 @@
+Index: src/main/java/hiber/model/Car.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hiber.model;\r\n\r\nimport javax.persistence.*;\r\nimport java.util.Objects;\r\n\r\n@Entity\r\n@Table(name = \"cars\")\r\npublic class Car {\r\n    @Id\r\n    @GeneratedValue(strategy = GenerationType.IDENTITY)\r\n    private Long id;\r\n\r\n    @Column(name = \"model\")\r\n    private String model;\r\n\r\n    @Column(name = \"series\")\r\n    private int series;\r\n\r\n    public Car() {\r\n    }\r\n\r\n    public Car(String model, int series) {\r\n        this.model = model;\r\n        this.series = series;\r\n    }\r\n\r\n    public Long getId() {\r\n        return id;\r\n    }\r\n\r\n    public void setId(Long id) {\r\n        this.id = id;\r\n    }\r\n\r\n    public String getModel() {\r\n        return model;\r\n    }\r\n\r\n    public void setModel(String model) {\r\n        this.model = model;\r\n    }\r\n\r\n    public int getSeries() {\r\n        return series;\r\n    }\r\n\r\n    public void setSeries(int series) {\r\n        this.series = series;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"Car{\" +\r\n                \"id=\" + id +\r\n                \", model='\" + model + '\\'' +\r\n                \", series=\" + series +\r\n                '}';\r\n    }\r\n\r\n    @Override\r\n    public boolean equals(Object o) {\r\n        if (this == o) return true;\r\n        if (o == null || getClass() != o.getClass()) return false;\r\n        Car car = (Car) o;\r\n        return series == car.series && Objects.equals(id, car.id) && Objects.equals(model, car.model);\r\n    }\r\n\r\n    @Override\r\n    public int hashCode() {\r\n        return Objects.hash(id, model, series);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/hiber/model/Car.java b/src/main/java/hiber/model/Car.java
+--- a/src/main/java/hiber/model/Car.java	(revision d35ee579462f4164304b681e099e1c6dbb22450e)
++++ b/src/main/java/hiber/model/Car.java	(date 1695815449730)
+@@ -16,6 +16,9 @@
+     @Column(name = "series")
+     private int series;
+ 
++    @OneToOne(mappedBy = "car")
++    private User user;
++
+     public Car() {
+     }
+ 
+@@ -48,6 +51,14 @@
+         this.series = series;
+     }
+ 
++    public User getUser() {
++        return user;
++    }
++
++    public void setUser(User user) {
++        this.user = user;
++    }
++
+     @Override
+     public String toString() {
+         return "Car{" +
+Index: src/main/java/hiber/MainApp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hiber;\r\n\r\nimport hiber.config.AppConfig;\r\nimport hiber.model.Car;\r\nimport hiber.model.User;\r\nimport hiber.service.UserService;\r\nimport org.springframework.context.annotation.AnnotationConfigApplicationContext;\r\n\r\nimport java.util.List;\r\n\r\npublic class MainApp {\r\n   //можно перенести этот эксепшн в UerDaoImp в метод файндюзер,\r\n   //потому что все исключения, в целом состоятся в том, что мы будем,\r\n   //например, искать юзера в пустой таблице или по пустому полю\r\n   public static void main(String[] args) {\r\n      AnnotationConfigApplicationContext context =\r\n              new AnnotationConfigApplicationContext(AppConfig.class);\r\n\r\n      UserService userService = context.getBean(UserService.class);\r\n\r\n      userService.add(new User(\"Ivan\", \"Reithman\", \"user1@mail.ru\", new Car(\"Tesla\", 7)));\r\n      userService.add(new User(\"Ann\", \"Fine\", \"user2@mail.ru\", new Car(\"Lada\", 110)));\r\n      userService.add(new User(\"Tam\", \"Bulatov\", \"user3@mail.ru\", new Car(\"Pegeout\", 1008)));\r\n      userService.add(new User(\"Nikolai\", \"Vasin\", \"user4@mail.ru\", new Car(\"Audi\", 8)));\r\n\r\n      List<User> users = userService.listUsers();\r\n      for (User user : users) {\r\n         System.out.println(\"Id = \" + user.getId());\r\n         System.out.println(\"First Name = \" + user.getFirstName());\r\n         System.out.println(\"Last Name = \" + user.getLastName());\r\n         System.out.println(\"Email = \" + user.getEmail());\r\n         System.out.println(\"Model = \" + user.getCar().getModel());\r\n         System.out.println(\"Series = \" + user.getCar().getSeries());\r\n         System.out.println();\r\n      }\r\n\r\n      System.out.println(userService.findUser(\"Tesla\", 7));\r\n\r\n      context.close();\r\n   }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/hiber/MainApp.java b/src/main/java/hiber/MainApp.java
+--- a/src/main/java/hiber/MainApp.java	(revision d35ee579462f4164304b681e099e1c6dbb22450e)
++++ b/src/main/java/hiber/MainApp.java	(date 1695815780775)
+@@ -9,7 +9,10 @@
+ import java.util.List;
+ 
+ public class MainApp {
+-   //можно перенести этот эксепшн в UerDaoImp в метод файндюзер,
++   //в этой схеме метод main кидает exeption и посольку он не отработан,
++   // он передается на уровень выше. А выше main уже только JVM.
++   // Следовательно exeption в JVM  не обработается
++   // можно перенести этот эксепшн в UerDaoImp в метод файндюзер,
+    //потому что все исключения, в целом состоятся в том, что мы будем,
+    //например, искать юзера в пустой таблице или по пустому полю
+    public static void main(String[] args) {
+@@ -34,7 +37,9 @@
+          System.out.println();
+       }
+ 
+-      System.out.println(userService.findUser("Tesla", 7));
++
++      userService.findUser("Tesla", 7);
++      userService.findUser("Audi", 8);
+ 
+       context.close();
+    }
+Index: src/main/java/hiber/service/UserServiceImp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hiber.service;\r\n\r\nimport hiber.dao.UserDao;\r\nimport hiber.model.Car;\r\nimport hiber.model.User;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Service;\r\nimport org.springframework.transaction.annotation.Transactional;\r\n\r\nimport java.util.List;\r\n\r\n@Service\r\npublic class UserServiceImp implements UserService {\r\n\r\n   @Autowired\r\n   private UserDao userDao;\r\n\r\n   @Transactional\r\n   @Override\r\n   public void add(User user) {\r\n      userDao.add(user);\r\n   }\r\n\r\n   @Transactional\r\n   @Override\r\n   public void add(User user, Car car) {\r\n      userDao.add(user, car);\r\n   }\r\n\r\n   @Transactional(readOnly = true)\r\n   @Override\r\n   public List<User> listUsers() {\r\n      return userDao.listUsers();\r\n   }\r\n\r\n   @Transactional(readOnly = true)\r\n   @Override\r\n   public User findUser(String model, int series) {\r\n      return userDao.findUser(model, series);\r\n   }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/hiber/service/UserServiceImp.java b/src/main/java/hiber/service/UserServiceImp.java
+--- a/src/main/java/hiber/service/UserServiceImp.java	(revision d35ee579462f4164304b681e099e1c6dbb22450e)
++++ b/src/main/java/hiber/service/UserServiceImp.java	(date 1695814589081)
+@@ -35,8 +35,8 @@
+ 
+    @Transactional(readOnly = true)
+    @Override
+-   public User findUser(String model, int series) {
+-      return userDao.findUser(model, series);
++   public void findUser(String model, int series) {
++      userDao.findUser(model, series);
+    }
+ 
+ }
+Index: src/main/java/hiber/dao/UserDaoImp.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hiber.dao;\r\n\r\nimport hiber.model.Car;\r\nimport hiber.model.User;\r\nimport org.hibernate.Session;\r\nimport org.hibernate.SessionFactory;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.stereotype.Repository;\r\n\r\nimport javax.persistence.TypedQuery;\r\nimport java.util.List;\r\n\r\n@Repository\r\npublic class UserDaoImp implements UserDao {\r\n\r\n   @Autowired\r\n   private SessionFactory sessionFactory;\r\n\r\n   @Override\r\n   public void add(User user) {\r\n      sessionFactory.getCurrentSession().save(user);\r\n   }\r\n\r\n   @Override\r\n   public void add(User user, Car car) {\r\n//override method for IDE\r\n   }\r\n\r\n   @Override\r\n   @SuppressWarnings(\"unchecked\")\r\n   public List<User> listUsers() {\r\n      TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery(\"from User\");\r\n      return query.getResultList();\r\n   }\r\n\r\n   @Override\r\n   public User findUser(String model, int series) {\r\n      Session session = sessionFactory.getCurrentSession();\r\n\r\n      TypedQuery<User> query = session.createQuery(\"from User where car.model = :model and car.series = :series\");\r\n      query.setParameter(\"model\", model);\r\n      query.setParameter(\"series\", series);\r\n      return query.getResultList().get(0);\r\n   }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/hiber/dao/UserDaoImp.java b/src/main/java/hiber/dao/UserDaoImp.java
+--- a/src/main/java/hiber/dao/UserDaoImp.java	(revision d35ee579462f4164304b681e099e1c6dbb22450e)
++++ b/src/main/java/hiber/dao/UserDaoImp.java	(date 1695815515651)
+@@ -34,12 +34,13 @@
+    }
+ 
+    @Override
+-   public User findUser(String model, int series) {
+-      Session session = sessionFactory.getCurrentSession();
+-
+-      TypedQuery<User> query = session.createQuery("from User where car.model = :model and car.series = :series");
+-      query.setParameter("model", model);
+-      query.setParameter("series", series);
+-      return query.getResultList().get(0);
++   public void findUser(String model, int series) {
++      Session session = sessionFactory.openSession();
++try(session){
++      Car car = session.createQuery("from User where car.model = :model and car.series = :series", Car.class)
++              .setParameter("model", model).setParameter("series", series).getSingleResult();
++   System.out.println(car.getUser());
++   } catch (RuntimeException e) {
++   System.out.println("User with car " + model + " " + series + " is not found");;
+    }
+-}
++}}
+Index: src/main/java/hiber/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hiber.service;\r\n\r\nimport hiber.model.Car;\r\nimport hiber.model.User;\r\n\r\nimport java.util.List;\r\n\r\npublic interface UserService {\r\n    void add(User user);\r\n\r\n    void add(User user, Car car);\r\n\r\n    List<User> listUsers();\r\n\r\n    User findUser(String model, int series);\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/hiber/service/UserService.java b/src/main/java/hiber/service/UserService.java
+--- a/src/main/java/hiber/service/UserService.java	(revision d35ee579462f4164304b681e099e1c6dbb22450e)
++++ b/src/main/java/hiber/service/UserService.java	(date 1695814589073)
+@@ -12,5 +12,5 @@
+ 
+     List<User> listUsers();
+ 
+-    User findUser(String model, int series);
++    void findUser(String model, int series);
+ }
+Index: src/main/java/hiber/dao/UserDao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package hiber.dao;\r\n\r\nimport hiber.model.Car;\r\nimport hiber.model.User;\r\n\r\nimport java.util.List;\r\n\r\npublic interface UserDao {\r\n   void add(User user);\r\n\r\n   void add(User user, Car car);\r\n\r\n   List<User> listUsers();\r\n\r\n   User findUser(String model, int series);\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/hiber/dao/UserDao.java b/src/main/java/hiber/dao/UserDao.java
+--- a/src/main/java/hiber/dao/UserDao.java	(revision d35ee579462f4164304b681e099e1c6dbb22450e)
++++ b/src/main/java/hiber/dao/UserDao.java	(date 1695814421858)
+@@ -12,6 +12,6 @@
+ 
+    List<User> listUsers();
+ 
+-   User findUser(String model, int series);
++   void findUser(String model, int series);
+ 
+ }

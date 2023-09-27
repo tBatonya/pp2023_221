@@ -9,7 +9,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.List;
 
 public class MainApp {
-   //можно перенести этот эксепшн в UerDaoImp в метод файндюзер,
+   //в этой схеме метод main кидает exeption и посольку он не отработан,
+   // он передается на уровень выше. А выше main уже только JVM.
+   // Следовательно exeption в JVM  не обработается
+   // можно перенести этот эксепшн в UerDaoImp в метод файндюзер,
    //потому что все исключения, в целом состоятся в том, что мы будем,
    //например, искать юзера в пустой таблице или по пустому полю
    public static void main(String[] args) {
@@ -34,7 +37,9 @@ public class MainApp {
          System.out.println();
       }
 
-      System.out.println(userService.findUser("Tesla", 7));
+
+      userService.findUser("Tesla", 7);
+      userService.findUser("Audi", 8);
 
       context.close();
    }

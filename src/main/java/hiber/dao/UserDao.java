@@ -12,6 +12,6 @@ public interface UserDao {
 
    List<User> listUsers();
 
-   User findUser(String model, int series);
+   void findUser(String model, int series);
 
 }
